@@ -14,7 +14,7 @@ global FileName
 % Create Log File
 %--------------------------------------------------------------------------
 PathForLogFile=strcat('C:\Users\',this_user,'\Dropbox\NYSTROM_MATLAB_CODE\Nystom_Modified_Method\');
-[logname] = CreateLogFile(PathForLogFile);
+[logname] = CreateLogFile(PathForLogFile,'routine');
 %--------------------------------------------------------------------------
 % Init parameters
 %--------------------------------------------------------------------------
@@ -24,12 +24,10 @@ Scalers.blinkVelocityThreshold = 1500;             % if vel > 1000 degrees/s, it
 Scalers.blinkAccThreshold = 100000;                % if acc > 100000 degrees/s^2, it is noise or blinks
 Scalers.peakDetectionThreshold = 100;              % Initial value of the peak detection threshold. 
 
-Scalers.PeakVelocityThreshold=65;
-Scalers.SacOnOffThresh=55;
-Scalers.WeakGlissadeVelocityThreshold=35;
+Scalers.PeakVelocityThreshold=55;
+Scalers.SacOnOffThresh=45;
+Scalers.WeakGlissadeVelocityThreshold=25;
 
-% Scalers.NsigmaPeak = 18;
-% Scalers.NsigmaOnOff = Scalers.NsigmaPeak*.80;
 Scalers.minFixDur = 0.030; % in seconds
 Scalers.minSaccadeDur = 0.010; % in seconds
 Scalers.maxSaccadeAmplitude = 6; % in degrees

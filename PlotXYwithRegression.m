@@ -21,11 +21,12 @@ end;
         set(FigHandle,'visible','on');
     end;
 %   Prep for regression
-
+    fprintf('in Plot XY: \n')
+    size(X)
     XX = [ones(size(X)) X];
-%     size(XX)
-%     size(Y)
-%     out=[XX Y]
+    size(XX)
+    size(Y)
+%   out=[XX Y];
     
 %   Regression
     [b,bint,r,rint,stats] = regress(Y,XX); 

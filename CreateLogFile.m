@@ -1,5 +1,5 @@
-function [logname]=CreateLogFile(PathStr)
-logname = sprintf('Log-%s',datestr(now,31));
+function [logname]=CreateLogFile(PathStr,message)
+logname = sprintf('%s-Log-%s',message,datestr(now,31));
 logname=strrep(logname,' ','-');
 logname=strrep(logname,':','-');
 logname=[PathStr logname '.txt'];
